@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="css/search-filter.css" href="extensions/filter-control/bootstrap-table-filter-control.css">
+    <title>Goods</title>
+</head>
+
+
+<body>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4 col-xxl-4">
+                <div class="goods_box" id="goods">
+                    <div class="menu">
+                        <button class="add btn-success" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">&#10010;  Dodaj pojazd  </button>
+                        <input type="text" placeholder="Filtruj według modelu..." class="search">
+                    </div>
+                    <div class="table-responsive" id="toolbar">
+                        <table class="goods table mt-2" id="table1" data-toggle="table" data-search="true" data-filter-control="true" data-show-export="true" data-click-to-select="true" data-escape="false" data-toolbar="#toolbar">
+                            <thead>
+
+
+
+                                <tr class="table-primary align-middle">
+                                    <th class="arrows" data-type="string">Marka pojazdu</th>
+                                    <th class="arrows" data-type="string">Model pojazdu</th>
+                                    <th class="arrows" data-type="number">Rok produkcji</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody class="list">
+                                <!-- List with goods -->
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Dodać nowy rekord</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="good_name" class="form-label">Marka pojazdu</label>
+                    <input type="text" class="form-control mb-3" id="good_name" maxlength="40">
+                    <label for="good_model" class="form-label">Model pojazdu</label>
+                    <input type="text" class="form-control mb-3" id="good_model">
+                    <label for="good_year" class="form-label">Rok produkcji</label>
+                    <input type="number" min="1900" max="2022" step="1" value="2010" class="form-control mb-3" id="good_year">
+                    <button type="submit" class="add_new btn btn-success">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal_edit -->
+    <div class="modal fade" id="exampleModal_edit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit rekord</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="good_name1" class="form-label">Marka pojazdu</label>
+                    <input type="text" class="form-control mb-3" id="good_name1" maxlength="40">
+                    <label for="good_model1" class="form-label">Model pojazdu</label>
+                    <input type="text" class="form-control mb-3" id="good_model1">
+                    <label for="good_year1" class="form-label">Rok produkcji</label>
+                    <input type="number" min="1900" max="2022" step="1" value="2010" class="form-control mb-3" id="good_year1">
+                    <button type="submit" class="add_new_1 btn btn-success">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/list.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/sorting.js"></script>
+    <script src="../js/sweetalert2.all.min.js"></script>
+    <script src="extensions/filter-control/bootstrap-table-filter-control.js"></script>
+</body>
+
+</html>
